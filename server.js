@@ -1,12 +1,21 @@
 // Installation Express
+const http = require('http');
+const app = require('./app');
 
-let app = require('express')()
+const server = http.createServer(app);
 
+server.listen(80, () => {
+    console.log("Le Server a reçu la requête !");
+})
+
+
+/*
 app.get('/', (request,response) => {
     response.send('Bienvenue M. Tsiory')
 })
 
 app.listen(80)
+*/
 
 /*
 //Server NodeJS
