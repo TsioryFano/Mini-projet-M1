@@ -1,3 +1,14 @@
+// Installation Express
+
+let app = require('express')()
+
+app.get('/', (request,response) => {
+    response.send('Bienvenue M. Tsiory')
+})
+
+app.listen(80)
+
+/*
 //Server NodeJS
 let http = require ('http')
 let fs = require('fs')
@@ -19,3 +30,4 @@ server.on('request', (request, response) => {
     })  
 })
 server.listen(80)
+*/

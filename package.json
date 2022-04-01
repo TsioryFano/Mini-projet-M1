@@ -1,0 +1,24 @@
+{
+  "name": "mini-projet-m1",
+  "version": "1.0.0",
+  "description": "Application MEAN (Mangodb, Express, Angular, NodeJS)\r Début : 23 Mars 2022\r Fin : 11 Avril 2022\r mini projet pour une société de livraison de nourriture de portant le nom de e-kaly.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TsioryFano/Mini-projet-M1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TsioryFano/Mini-projet-M1/issues"
+  },
+  "homepage": "https://github.com/TsioryFano/Mini-projet-M1#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
