@@ -2,7 +2,11 @@ let app = require('express')()
 
 
 //Connxion à mongoose
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+
+//Appel des données
+let bodyParser = require('body-parser')
+let RouteProducts = require('./router/product')
 
 mongoose.connect('mongodb+srv://tsiory:<Nothing123>@ekaly.icbx5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',).then(() => 
 {
@@ -11,8 +15,13 @@ mongoose.connect('mongodb+srv://tsiory:<Nothing123>@ekaly.icbx5.mongodb.net/myFi
     console.log(error);
 });
 
+app.use(bodyParser.json())
+app.use('./api/products/', RouteProducts)
+
+/*
 app.get('/', (request,response) => {
     response.send('Bienvenue M. Tsiory Fano')
 });
+*/
 
 module.exports = app;
