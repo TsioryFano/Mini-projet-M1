@@ -10,10 +10,6 @@ server.listen(80, () => {
 
 
 /*
-app.get('/', (request,response) => {
-    response.send('Bienvenue M. Tsiory')
-})
-
 app.listen(80)
 */
 
