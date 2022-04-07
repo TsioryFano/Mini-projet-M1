@@ -1,10 +1,20 @@
 // Installation Express
+//Importation du package HTTP de Nodejs
 const http = require('http');
+
+//Importation du package pour les variables d'environnement
+const dotenv = require("dotenv");
+const result = dotenv.config();
+
+//Importation de l'application/fichier app.js
 const app = require('./app');
 
+//Creation du server
 const server = http.createServer(app);
 
-server.listen(80, () => {
+
+//Le serveur écoute les requêtes sur port
+server.listen(process.env.PORT, () => {
     console.log("Le Server a reçu la requête !");
 })
 

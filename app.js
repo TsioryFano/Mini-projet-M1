@@ -18,10 +18,14 @@ const mongoose = require('mongoose');
 //Importation des routes signup
 const userRoutes = require("./router/user");
 
+//Importation du package pour les variables d'environnement
+const dotenv = require("dotenv");
+const result = dotenv.config();
 
 //Connexion à mongoose
 //JE n'ai pas créer un fichier spécifique pour la bdd mais tout de suite dans app.js
-mongoose.connect('mongodb+srv://tsiory:Nothing123@cluster0.osoth.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+//Au niveau de changement des variable d'environnement, on n'utilise pas de simple quote mais de backticks (altgr+7) 
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.osoth.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,{
     useNewUrlParser: true, useUnifiedTopology: true 
 })
 .then(() => {
@@ -31,8 +35,8 @@ mongoose.connect('mongodb+srv://tsiory:Nothing123@cluster0.osoth.mongodb.net/myF
 });
 
 
-
-let app = require('express')()
+// création de l'application de express
+const app = require('express')();
 
 //transformer le corps en json objet js utilisable
 app.use(bodyParser.json());
@@ -49,6 +53,7 @@ app.get('/', (request,response) => {
 });
 */
 
+//Exporation de app.js
 module.exports = app;
 
 //Exportation de Mongoose
