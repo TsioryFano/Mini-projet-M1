@@ -12,8 +12,8 @@ const app = require('./app');
 //Creation du server
 const server = http.createServer(app);
 
-
 //Le serveur écoute les requêtes sur port
+//Ceci doit se trouver toujours à la fin du code 
 server.listen(process.env.PORT, () => {
     console.log("Le Server a reçu la requête ! au port "+process.env.PORT);
 })

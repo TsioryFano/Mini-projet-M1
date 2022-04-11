@@ -80,5 +80,8 @@ function affichageMenus (response) {
     }
 }
 
-affichageMenus(response)
+window.onload = () => {
+    affichageMenus(response);
+};
+
 

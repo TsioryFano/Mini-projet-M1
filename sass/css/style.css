@@ -28,8 +28,8 @@
   grid-row-gap: 10px;
   grid-template-areas: "header header" "photo_menu menu" "footer footer";
 }
-.grid .container-menu .mise-en-place-menu {
-  border: solid 1px black;
+.grid .mise-en-place-menu {
+  border: solid 2px black;
   background-color: bisque;
 }
 
@@ -50,7 +50,7 @@ header .menu ul li {
   margin-right: 3rem;
 }
 
-.menu1 {
+.menu {
   grid-area: menu1;
 }
 
