@@ -1,10 +1,80 @@
-@import "button.scss";
-@import "effets.scss";
-@import "function.scss";
-@import "mixins.scss";
-@import "variables.scss";
+@import "./button";
+@import "./effets";
+@import "./function";
+@import "./mixins";
+@import "./variables";
+@import "./media";
 
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    a {
+        text-decoration: none;
+        &:hover{
+            color: red;
+        }
+    }
 }
+
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.mise-en-place-menu {
+     display: flex;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-template-areas:
+      "header header"
+      "photo_menu menu"
+      "footer footer" ;
+
+      .container-menu 
+      .mise-en-place-menu {
+        border: solid 1px black;
+        background-color: bisque;
+      }
+  }
+  // ----------------------------------------------- Début mise en place de la grille index.html -----------------------------------------//
+  header{
+    grid-area: header;
+    text-align: center;
+    .menu {
+        background-color: aquamarine;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+                li {
+                margin-left: 3rem;
+                margin-right: 3rem;
+                }
+            }
+    }
+
+  }
+  
+  .menu1{
+    grid-area: menu1;
+  }
+  .photo_menu1{
+    grid-area: photo_menu1;
+  }
+  
+
+  footer{
+    grid-area: footer;
+    text-align: center;
+  }
+  
+  // ----------------------------------------------- Fin mise en place de la grille index.html -----------------------------------------//
+  

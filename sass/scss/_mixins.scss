@@ -1,0 +1,9 @@
+@mixin style-description-menu {
+    font-weight: bold;
+    font-size: 1.3rem;
+    & span {
+        font-weight: normal;
+        font-size: 1.1rem;
+        color: black;
+    }
+}
